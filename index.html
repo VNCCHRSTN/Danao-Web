@@ -1,0 +1,128 @@
+<html>
+    <head>
+		<title>Home</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/x-icon" href="icons/favicon.png">
+		<link rel="stylesheet" href="css/css1.css">
+		<link rel="stylesheet" href="css/HomeContentCSS.css">
+		<link href='https://fonts.googleapis.com/css?family=Aclonica|Stick|Stylish|Tomorrow|Ubuntu' rel='stylesheet'>
+        <style>
+*{
+	box-sizing:border-box;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+        </style>
+        </head>
+    <body>
+		<!--top navigation-->
+		<nav>
+			<ul>
+				<li><a href ="index.html">Home</a></li>
+				<li><a href ="About.html">About</a></li>
+				<li><a href ="Gallery.html">Gallery</a></li>
+				<li><a href ="Dev.html">Developers Info</a></li>
+				<li><a href ="Contact.html">Contact Us</a></li>
+			</ul>
+
+			<!--night mode-->
+			<button onclick="night()" class="nightbtn">Dark Mode</button>
+
+			<script>
+				function night() {
+				   var element = document.body;
+				   element.classList.toggle("dark-mode");
+				}
+				</script>
+		
+		</nav>
+
+		<!--side navigation-->
+		<div>
+			<div id="myHomeSidenav" class="sidenav">
+				<a href="#image" id="imagesidenav">Go to top</a>
+				<a href="#ety" id="etysidenav">Etymology</a>
+				<a href="#history" id="historysidenav">History</a>
+				<a href="#infodanao" id="demographsidenav">Demographics</a>
+				<a href="#brgy" id="brgysidenav">Barangays</a>
+				<a href="#gmap" id="mapsidenav">Map</a>
+			  </div>
+			  </div>
+			<!--for the image section-->
+			<!--<div class="slideshow-container">-->
+				<div>
+
+				<div class="mySlides fade">
+				  <div class="numbertext">1 / 3</div>
+				  <img src="images/sample2.png">
+				</div>
+				
+				<div class="mySlides fade">
+				  <div class="numbertext">2 / 3</div>
+				  <img src="images/sample1.png">
+				</div>
+				
+				<div class="mySlides fade">
+				  <div class="numbertext">3 / 3</div>
+				  <img src="images/sample3.png">
+				</div>
+
+				<p class="centered">DANAO</p>
+				</div>
+				<!--</div>-->
+				<br>
+				
+				<div style="text-align:center">
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				</div>
+				
+				<script>
+				let slideIndex = 0;
+				showSlides();
+				
+				function showSlides() {
+				  let i;
+				  let slides = document.getElementsByClassName("mySlides");
+				  let dots = document.getElementsByClassName("dot");
+				  for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				  }
+				  slideIndex++;
+				  if (slideIndex > slides.length) {slideIndex = 1}    
+				  for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";  
+				  dots[slideIndex-1].className += " active";
+				  setTimeout(showSlides, 5000); // Change image every 2 seconds
+				}
+				</script>
+
+		<div>
+			<div class="newssection">
+				<h1 class="heading">Danao News</h1>
+				<div class="newscontent">
+				</div>
+			</div>
+			<div class="entertainsection">
+				<p>entertaqin</p>
+			</div>
+		</div>
+			
+		<!--<div>
+			<p class="reference">Danao<br><br>
+			All data presented on this webpage is based on the 2020 census.<br><br><br>
+			Reference: <a href="https://en.wikipedia.org/wiki/Danao,_Bohol" class="reference">https://en.wikipedia.org/wiki/Danao,_Bohol</a>
+		</div>-->
+    </body>
+</html>
