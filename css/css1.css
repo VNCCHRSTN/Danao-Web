@@ -83,11 +83,16 @@ nav a:hover{
   margin-bottom: 10vw;
   background-color: rgba(232, 228, 201, 0.8);
 }
+@media(max-width:576px){
+  #mySidenav a{
 
+    visibility: hidden;
+  }
+}
 /*side navigation*/
 #mySidenav a {
   position: fixed;
-  left: -11.75vw;
+  left: -178px;
   transition: 0.3s;
   padding: 1vw;
   width: 13.68vw;
@@ -157,7 +162,6 @@ nav a:hover{
 	width: 33.33333%;
 	padding: 1.3vw;
 }
-
 /*text stylings*/
 .LFont{
 	font-size: 4.0vw;
